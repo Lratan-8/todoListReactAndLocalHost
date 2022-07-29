@@ -133,7 +133,7 @@ let Todo = () => {
 
 
 
-                <img style={{ width: '15%', filter: 'drop-shadow(0 0 0.30rem black)' }} src="https://cdn-icons-png.flaticon.com/512/4697/4697260.png" alt="" />
+                <img style={{ width: '15%' }} src="https://static.thenounproject.com/png/850545-200.png" alt="" />
                 <div style={{ display: 'flex', width: '100%', justifyContent: 'space-evenly', marginTop: '10px', backgroundColor: 'white', borderRadius: '10px', height: '50px', alignItems: 'center' }}>
                     <img src="https://cdn-icons-png.flaticon.com/512/4693/4693312.png" alt="" style={{ height: '30px' }} />
                     <input id='inputBox' onChange={handleChange} value={value} placeholder='add items' style={{ border: 'none', height: '95%', width: '70%' }}></input>
