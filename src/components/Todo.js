@@ -37,7 +37,7 @@ let Todo = () => {
 
 
 
-    //to add new items to the list
+    //to add new items to the list using plus button
 
     let addItem = () => {
 
@@ -49,6 +49,25 @@ let Todo = () => {
             setvalue('');
         }
     }
+
+
+
+
+
+    //handle enter key
+
+
+    let handleKey = (event) =>{
+
+        if(event.key === 'Enter'){
+            addItem();
+        }
+
+    };
+
+
+
+
 
 
     //style for the todolist container
@@ -136,7 +155,7 @@ let Todo = () => {
                 <img style={{ width: '15%' }} src="https://static.thenounproject.com/png/850545-200.png" alt="" />
                 <div style={{ display: 'flex', width: '100%', justifyContent: 'space-evenly', marginTop: '10px', backgroundColor: 'white', borderRadius: '10px', height: '50px', alignItems: 'center' }}>
                     <img src="https://cdn-icons-png.flaticon.com/512/4693/4693312.png" alt="" style={{ height: '30px' }} />
-                    <input id='inputBox' onChange={handleChange} value={value} placeholder='add items' style={{ border: 'none', height: '95%', width: '70%' }}></input>
+                    <input id='inputBox' onKeyDown={handleKey} onChange={handleChange} value={value} placeholder='add items' style={{ border: 'none', height: '95%', width: '70%' }}></input>
                     <img alt='' onClick={addItem} src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" style={{ height: '20px', cursor: 'pointer' }} />
 
                 </div>
